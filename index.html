@@ -17,7 +17,7 @@
         data-nonce=""
         data-auto_prompt="false">
     </div>
-    <div id = "g_id_signin" class="g_id_signin"
+    <div class="g_id_signin"
         data-type="standard"
         data-shape="pill"
         data-theme="filled_black"
@@ -30,7 +30,7 @@
         function handleCredentialResponse(Data){
             console.log(Data)
             var Background = document.getElementById("Background");
-            var LoginButton = document.getElementById("g_id_signin");
+            var LoginButton = document.getElementsByClassName("g_id_signin")[0];
             LoginButton.style.top = "0px";
             LoginButton.style.right = "20px";
             Background.style.filter = "blur(0px)";
