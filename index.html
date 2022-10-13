@@ -40,7 +40,9 @@
                     access_token = tokenResponse.access_token;
                 },
             })  
-            GoogleClient.requestAccessToken();
+            setTimeout(function(){
+                GoogleClient.requestAccessToken();
+            },50)
         }
 
         function GetUserInfo(){
