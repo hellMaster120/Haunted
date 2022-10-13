@@ -26,3 +26,9 @@ body{
     filter: blur(13px);
     transition: filter 2s;
 }
+.g_id_signin{
+    position: absolute;
+    right: 50vw;
+    top:50vh;
+    transition: right 2s,top 2s;
+}
