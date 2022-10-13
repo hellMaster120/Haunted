@@ -7,27 +7,8 @@
     <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
 </head>
 <body>
-    <nav id = "Nav">
-        <ol>
-            <li>  
-               <div class = "NavButton" > 
-                    <a href = "./HTML/index1.html">Index1</a>    
-               </div>
-            </li>
-            <li>
-                <div class = "NavButton">
-                    <a class = "NavButton" href = "HTML/index2.html">Index2</a>
-                </div>
-                
-            </li>
-            <li>
-                <div class = "NavButton">
-                    <a class = "NavButton" href="./HTML/Index3.html">Index3</a>
-                </div>
-            </li>
-        </ol>
-    </nav>    
-   
+
+    <button id = "LoginButton" onclick="Login()">Login in with Google</button>
     <script>
         const APIKEY = "4331565397-pplqj2jubff9854inc56n37vigfsnjj7.apps.googleusercontent.com"
         var access_token
@@ -40,10 +21,11 @@
                     access_token = tokenResponse.access_token;
                 },
             })  
-            setTimeout(function(){
-                GoogleClient.requestAccessToken();
-            },100)
         }
+        function Login(){
+            GoogleClient.requestAccessToken();
+        }
+
 
         function GetUserInfo(){
             var xhr = new XMLHttpRequest();
