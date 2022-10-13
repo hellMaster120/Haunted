@@ -15,6 +15,16 @@ html{
 body{
 	min-width:100%;
 	min-height:100%;
+
+  
+
+
+    background: url(http://cdn.wallpaperhi.com/1920x1080/20120302/haunted%20house%201920x1080%20wallpaper_www.wallpaperhi.com_19.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken, luminosity;
 }
 .NavButton{
 
