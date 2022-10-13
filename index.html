@@ -7,6 +7,7 @@
     
 </head>
 <body>
+    <div id = "Background"></div>
     <script src="https://accounts.google.com/gsi/client"  async defer></script>
     <div id="g_id_onload"
         data-client_id="4331565397-pplqj2jubff9854inc56n37vigfsnjj7.apps.googleusercontent.com"
@@ -16,7 +17,6 @@
         data-nonce=""
         data-auto_prompt="false">
     </div>
-
     <div class="g_id_signin"
         data-type="standard"
         data-shape="pill"
@@ -24,13 +24,17 @@
         data-text="signin_with"
         data-size="large"
         data-logo_alignment="left"
-        style="position: absolute;right: 20px;">
+        style="position: absolute;right: 50vw;top:50vh;">
     </div>
-
 
     <script>
         function handleCredentialResponse(Data){
             console.log(Data)
+            var Background = document.getElementById("Background");
+            var LoginButton = document.getElementById("g_id_signin");
+            Background.style.filter = "blur(0px)"
+            LoginButton.remove();
+
         }
 
 
