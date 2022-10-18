@@ -26,9 +26,28 @@ body{
     filter: blur(13px);
     transition: filter 2s;
 }
+
 .g_id_signin{
     position: absolute;
     right: 50vw;
     top:50vh;
     transition: right 2s,top 2s;
+}
+
+#Door{
+
+    width: 70px;
+    height: 155px;
+    position: relative;
+    transform: translate(100%, -100%);
+    top: 75%;
+    left: 48vw;
+    box-shadow: #ffffff78 -4px 0px 20px;
+    transition: box-shadow 1s;
+    border-radius: 4px;
+}
+#Door:hover{
+    cursor: pointer;
+    box-shadow: rgb(138,3,3) -4px 0px 20px 8px;
+
 }
