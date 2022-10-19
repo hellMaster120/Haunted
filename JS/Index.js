@@ -14,7 +14,7 @@ function handleCredentialResponse(Data){
     LoginButton.style.top = "0px";
     LoginButton.style.right = "20px";
     Background.style.filter = "blur(0px)";
-    localStorage.setItem("Login", {"Data":Data,"Logined":true});
+    localStorage.setItem("Login",  JSON.stringify({"Data":Data,"Logined":true}));
 }
 
 Background.addEventListener("click",(Data)=>{
