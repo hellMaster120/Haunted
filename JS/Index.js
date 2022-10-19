@@ -2,7 +2,7 @@
 var Background = document.getElementById("Background");
 var LoginButton = document.getElementsByClassName("g_id_signin")[0];
 var TestingMode = true
-
+var Path = (window.location.href+"").split("index.html")[0];
 if(TestingMode == true){
     LoginButton.style.top = "0px";
     LoginButton.style.right = "20px";
@@ -21,7 +21,7 @@ Background.addEventListener("click",(Data)=>{
     console.log("YOUR MOM")
     var StorageData = JSON.parse(localStorage.getItem("Login"))
     if(Data.target == document.getElementById("Door") && StorageData["Logined"]){
-        window.location.pathname = "/HTML/index1.html"
+        window.location.href = Path+"/HTML/index1.html"
     }
    
 })
