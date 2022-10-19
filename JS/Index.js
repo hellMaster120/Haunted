@@ -21,7 +21,7 @@ Background.addEventListener("click",(Data)=>{
     console.log("YOUR MOM")
     var StorageData = JSON.parse(localStorage.getItem("Login"))
     if(Data.target == document.getElementById("Door") && StorageData["Logined"]){
-        window.location = "../HTML/index1.html" 
+        window.location.pathname = "/HTML/index1.html"
     }
    
 })
