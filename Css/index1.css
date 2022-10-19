@@ -16,3 +16,14 @@ body{
 	min-width:100%;
 	min-height:100%;
 }
+
+#Background{
+    position:absolute;
+    background: url(../Imgs/haunted\ house\ 1920x1080\ wallpaper_www.wallpaperhi.com_19\ EDITED.png) no-repeat center center fixed; 
+    background-size: cover;
+    background-blend-mode: darken, luminosity;
+    width: 100%;
+    height: 100%;
+    filter: blur(13px);
+    transition: filter 2s;
+}
