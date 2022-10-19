@@ -18,7 +18,7 @@ body{
 }
 #Background{
     position:absolute;
-    background: url(../Imgs/haunted\ house\ 1920x1080\ wallpaper_www.wallpaperhi.com_19\ EDITED.png) no-repeat center center fixed; 
+    background: url('Background_index2.png') no-repeat center center fixed; 
     background-size: cover;
     background-blend-mode: darken, luminosity;
     width: 100%;
