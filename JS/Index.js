@@ -4,7 +4,7 @@ var LoginButton = document.getElementsByClassName("g_id_signin")[0];
 var TestingMode = true
 var Path = (window.location.href+"").split("index.html")[0];
 
-
+localStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
 if(JSON.parse(localStorage.getItem("Login"))["Logined"]){
     var Background = document.getElementById("Background");
     Background.style.filter = "blur(0px)";  
