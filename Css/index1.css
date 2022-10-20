@@ -19,7 +19,7 @@ body{
 }
 #Background{
     position:absolute;
-    background: url(../Imgs/index\ 1.jpg) no-repeat center center fixed; 
+    background: url(../Imgs/1index.png) no-repeat center center fixed; 
     background-size: cover;
     background-blend-mode: darken, luminosity;
     width: 100%;
@@ -30,8 +30,9 @@ body{
 #Door{
     height:160px;
     position: relative;
-    top:400px;
+    top:350px;
     left: -43px;
     width:65px;
     z-index: -1;
+    opacity: 0;
 }
