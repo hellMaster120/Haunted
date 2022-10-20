@@ -15,15 +15,27 @@ html{
 body{
 	min-width:100%;
 	min-height:100%;
+	
 }
-
 #Background{
     position:absolute;
-    background: url(../Imgs/haunted\ house\ 1920x1080\ wallpaper_www.wallpaperhi.com_19\ EDITED.png) no-repeat center center fixed; 
+    background: url(../Imgs/index\ 2.jpg) no-repeat center center fixed; 
     background-size: cover;
     background-blend-mode: darken, luminosity;
     width: 100%;
     height: 100%;
     filter: blur(13px);
     transition: filter 2s;
+}
+#Door{
+
+    width: 70px;
+    height: 155px;
+    position: relative;
+    transform: translate(100%, -100%);
+    top: 75%;
+    left: 48vw;
+	box-shadow: #ffffff78 -4px 0px 20px;
+    transition: box-shadow 1s;
+    border-radius: 4px;
 }
