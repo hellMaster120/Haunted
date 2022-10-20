@@ -78,3 +78,5 @@ window.onbeforeunload(ClearData)
 function ClearData(){
     localStorage.clear()
 }
+
+
