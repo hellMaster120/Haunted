@@ -2,7 +2,6 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	text-align: center;
 }
 
 html{
@@ -25,4 +24,16 @@ body{
     height: 100%;
     filter: blur(13px);
     transition: filter 2s;
+	
+}
+#blink{
+	height:90%;
+	position: absolute;
+	left:444px;
+	top: 88px;
+	opacity: 0;
+}
+#jump{
+	opacity: 0;
+
 }
