@@ -28,14 +28,10 @@ body{
     transition: filter 2s;
 }
 #Door{
-
-    width: 70px;
-    height: 155px;
+    height:160px;
     position: relative;
-    transform: translate(100%, -100%);
-    top: 75%;
-    left: 48vw;
-	box-shadow: #ffffff78 -4px 0px 20px;
-    transition: box-shadow 1s;
-    border-radius: 4px;
+    top:400px;
+    left: -43px;
+    width:65px;
+    z-index: -1;
 }
