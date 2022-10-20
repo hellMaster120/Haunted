@@ -3,6 +3,9 @@ var LoginButton = document.getElementsByClassName("g_id_signin")[0];
 
 var TestingMode = true
 var Path = (window.location.href+"").split("index.html")[0];
+var JumpScareCount = 0
+var JumpScareDone = [];
+
 
 
 if(JSON.parse(localStorage.getItem("Login"))["Logined"]){
@@ -39,11 +42,32 @@ Background.addEventListener("click",(Data)=>{
     }
     JumpScares(Data)
 })
+function SendDataToAPI(Data){
 
+}
+function HandelNotes(Data){
+
+}
 function JumpScares(Data){
     console.log(Data)
     if(Data.target.getAttribute("class") == "JumpScare"){
         console.log("BOO")
+        if(JumpScareDone.length == 0){
+            JumpScareDone.push(Data.target)
+            JumpScareCount = JumpScareCount+1
+        }else{
+            JumpScareDone.forEach(AData=>{
+                if(AData != Data.target){
+                    JumpScareDone.push(Data.target)
+                    JumpScareCount = JumpScareCount+1
+                }
+                console.log(AData)
+            })
+        }
+        SendDataToAPI({
+            "JumpScares":JumpScareDone,
+            "JumpScareCount":JumpScareCount
+        })
     }
 
 }
