@@ -37,3 +37,57 @@ body{
 	opacity: 0;
 
 }
+#note1{
+    height: 95px;
+	width:95px;
+	margin-bottom: 15px;
+  	border: 1px solid black;
+	background-color: red;
+	position: absolute;
+	left: 400px;
+	top: 75%;
+
+
+
+
+
+}
+
+#note2{
+    /*make very faded*/
+	height: 95px;
+	width:95px;
+	margin-bottom: 15px;
+  	border: 1px solid black;
+	background-color: red;
+	position: absolute;
+	left: 1200px;
+	top: 15%;
+	opacity: 1;
+	transition:opacity 2s;
+
+	
+	
+
+
+
+
+}
+#note3{
+    /*under the pillow*/
+	height: 95px;
+	width:95px;
+	margin-bottom: 15px;
+  	border: 1px solid black;
+	background-color: red;
+	position: absolute;
+	left: 357px;
+	top: 580px;
+
+	
+	
+
+
+
+
+}
