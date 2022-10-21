@@ -9,7 +9,7 @@ var API = ""
 var NotesFound = [];
 var NoteCount = 0;
 
-
+localStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
 if(JSON.parse(localStorage.getItem("Login"))["Logined"]){
     var Background = document.getElementById("Background");
     Background.style.filter = "blur(0px)";  
