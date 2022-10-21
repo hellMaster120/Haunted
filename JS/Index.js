@@ -5,7 +5,9 @@ var TestingMode = true
 var Path = (window.location.href+"").split("index.html")[0];
 var JumpScareCount = 0
 var JumpScareDone = [];
-
+var API = ""
+var NotesFound = [];
+var NoteCount = 0;
 
 
 if(JSON.parse(localStorage.getItem("Login"))["Logined"]){
@@ -41,13 +43,17 @@ Background.addEventListener("click",(Data)=>{
         window.location.href = Path+"/HTML/index1.html"
     }
     JumpScares(Data)
+    HandelNotes(Data)
 })
+
 function SendDataToAPI(Data){
 
 }
+
 function HandelNotes(Data){
 
 }
+
 function JumpScares(Data){
     console.log(Data)
     if(Data.target.getAttribute("class") == "JumpScare"){
