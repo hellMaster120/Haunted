@@ -13,14 +13,16 @@ if(window.origin != "https://mc-kshellenbarger24.github.io"){
     Path = window.origin
 }
 
-sessionStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
+if(JSON.parse(sessionStorage.getItem("Login")) == null){
+    sessionStorage.setItem("Login", JSON.stringify({"Data":"{}","Logined":false})); 
+}
+
 if(sessionStorage.getItem("JumpScares") == null){
     sessionStorage.setItem("JumpScares", JSON.stringify({"JumpScares":[],"Count":JumpScareCount}));
 }else{
     JumpScareDone = JSON.parse(sessionStorage.getItem("JumpScares"))["JumpScares"]
     JumpScareCount = JSON.parse(sessionStorage.getItem("JumpScares"))["Count"]
 }
-
 
 if(JSON.parse(sessionStorage.getItem("Login"))["Logined"]){
     var Background = document.getElementById("Background");
@@ -35,6 +37,7 @@ if(TestingMode == true){
     Background.style.filter = "blur(0px)";
     sessionStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
 }
+
 
 function handleCredentialResponse(Data){
     if(LoginButton){
