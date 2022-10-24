@@ -13,8 +13,12 @@ if(window.origin != "https://mc-kshellenbarger24.github.io"){
     Path = window.origin
 }
 
-localStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
-if(JSON.parse(localStorage.getItem("Login"))["Logined"]){
+
+if(JSON.parse(sessionStorage.getItem("Login")) == null){
+    sessionStorage.setItem("Login", JSON.stringify({"Data":"{}","Logined":false})); 
+}
+
+if(JSON.parse(sessionStorage.getItem("Login"))["Logined"]){
     var Background = document.getElementById("Background");
     Background.style.filter = "blur(0px)";  
 }
@@ -25,8 +29,9 @@ if(TestingMode == true){
         LoginButton.style.right = "20px";
     }
     Background.style.filter = "blur(0px)";
-    localStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
+    sessionStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
 }
+
 
 function handleCredentialResponse(Data){
     if(LoginButton){
@@ -34,13 +39,13 @@ function handleCredentialResponse(Data){
         LoginButton.style.right = "20px";
     }
     Background.style.filter = "blur(0px)";
-    localStorage.setItem("Login",  JSON.stringify({"Data":Data,"Logined":true}));
+    sessionStorage.setItem("Login",  JSON.stringify({"Data":Data,"Logined":true}));
 }
 
 
 Background.addEventListener("click",(Data)=>{
     console.log("YOUR MOM")
-    var StorageData = JSON.parse(localStorage.getItem("Login"))
+    var StorageData = JSON.parse(sessionStorage.getItem("Login"))
     if(Data.target == document.getElementById("Door") && StorageData["Logined"]){
         window.location.href = Path+Data.target.getAttribute("Link")
     }
@@ -78,13 +83,6 @@ function JumpScares(Data){
         })
     }
 
-}
-
-window.onunload(ClearData)
-window.onbeforeunload(ClearData)
-
-function ClearData(){
-    localStorage.clear()
 }
 
 

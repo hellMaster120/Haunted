@@ -2,6 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	filter: contrast(1.2) brightness(0.8);
 }
 
 html{
@@ -38,56 +39,47 @@ body{
 
 }
 #note1{
-    height: 95px;
-	width:95px;
-	margin-bottom: 15px;
-  	border: 1px solid black;
-	background-color: red;
-	position: absolute;
-	left: 400px;
-	top: 75%;
-
-
-
-
-
+    width: 90px;
+    margin-bottom: 15px;
+    position: absolute;
+    left: 404px;
+    top: 77.4%;
+    cursor: pointer;
+    transform: rotate3d(13, 0, -5, 60deg);
 }
 
 #note2{
-    /*make very faded*/
-	height: 95px;
-	width:95px;
-	margin-bottom: 15px;
-  	border: 1px solid black;
-	background-color: red;
-	position: absolute;
-	left: 1200px;
-	top: 15%;
-	opacity: 1;
-	transition:opacity 2s;
-
-	
-	
-
-
-
-
+    width: 95px;
+    margin-bottom: 15px;
+    position: absolute;
+    left: 1205px;
+    top: 21%;
+    opacity: 1;
+    transition: opacity 2s;
+    cursor: pointer;
+    transform: rotate3d(193, 0, 0, 22deg);
+    filter: brightness(0.33);
 }
+
 #note3{
-    /*under the pillow*/
-	height: 95px;
-	width:95px;
-	margin-bottom: 15px;
-  	border: 1px solid black;
-	background-color: red;
-	position: absolute;
-	left: 357px;
-	top: 580px;
+    width: 43px;
+    margin-bottom: 15px;
+    position: absolute;
+    left: 385px;
+    top: 630px;
+    cursor: pointer;
+    transform: rotate3d(135, -24, 14, 60deg);
+	filter: brightness(0.36);
+}
 
-	
-	
-
-
-
-
+#Door{
+    position: absolute;
+    right: 428px;
+    width: 178px;
+    height: 360px;
+    top: 241px;
+    z-index: -1;
+    box-shadow: #a36f2252 -4px 0px 20px 19px;
+    cursor: pointer;
+    
 }
