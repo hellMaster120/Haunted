@@ -44,7 +44,6 @@ body{
     position: absolute;
     left: 404px;
     top: 77.4%;
-    cursor: pointer;
     transform: rotate3d(13, 0, -5, 60deg);
 }
 
@@ -56,7 +55,6 @@ body{
     top: 21%;
     opacity: 1;
     transition: opacity 2s;
-    cursor: pointer;
     transform: rotate3d(193, 0, 0, 22deg);
     filter: brightness(0.33);
 }
@@ -67,7 +65,6 @@ body{
     position: absolute;
     left: 385px;
     top: 630px;
-    cursor: pointer;
     transform: rotate3d(135, -24, 14, 60deg);
 	filter: brightness(0.36);
 }
