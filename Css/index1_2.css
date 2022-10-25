@@ -1,0 +1,10 @@
+#Background{
+    position:absolute;
+    background: url(../Imgs/the.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    background-blend-mode: darken, luminosity;
+    width: 100%;
+    height: 100%;
+    filter: blur(13px);
+    transition: filter 2s;
+}
