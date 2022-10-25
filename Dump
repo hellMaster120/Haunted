@@ -18,15 +18,3 @@ StringArray.forEach(element => {
 
 
 
-
-
-DoneArray = [
-]
-Test = Test.replace("%"," ")
-Test = Test.replace("  "," ")
-DoneString = ""
-DoneArray.forEach(Test=>{
-    DoneString = DoneString+" "+Decoder.decode(Test)
-    DoneString = DoneString.replace("  "," ")
-})
-console.log(DoneString)
