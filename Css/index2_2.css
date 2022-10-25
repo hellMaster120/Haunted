@@ -27,3 +27,77 @@ body{
     transition: filter 2s;
 
 }
+#note1{
+	width: 41px;
+    position: absolute;
+    top: 185px;
+    left: 597px;
+    filter: brightness(.5);
+    transform: rotate3d(1, 3, 8, 182deg);
+
+}
+#note2{
+	width: 80px;
+    position: absolute;
+    top: 435px;
+    left: 636px;
+    filter: brightness(.1);
+    transform: rotate3d(1, 1, 1, 253deg);
+}
+#note3{
+	width: 80px;
+    position: absolute;
+    transform: rotate3d(3, 3, 6, 262deg);
+    top: 193px;
+    left: 261px;
+    filter: hue-rotate(336deg) brightness(0.4);
+}
+#note4{
+	width: 80px;
+    position: absolute;
+    top: 788px;
+    left: 228px;
+    transform: rotate(140deg);
+    filter: brightness(.05);
+
+}
+#note5{
+	width: 80px;
+    position: absolute;
+    top: 162px;
+    left: 406px;
+    filter: brightness(.7);
+    transform: rotate3d(5, 5, 2, 148deg);
+
+
+}
+#note6{
+	width: 80px;
+	position: absolute;
+	top:201px;
+	transform: rotate(90deg);
+	right:277px;
+	filter: brightness(.6);
+	
+}
+
+#note7{
+	width: 80px;
+	position: absolute;
+	top: 65%;
+	right:468px;
+	transform: rotate3d(250, 5, 9, 293deg);
+	filter:brightness(.3);
+
+}
+#Door{
+	position: absolute;
+    right: 355px;
+    width: 134px;
+    height: 306px;
+    top: 140px;
+    transform: rotate3d(3, 9, 150, 1deg);
+    z-index: -1;
+    cursor: pointer;
+
+}
