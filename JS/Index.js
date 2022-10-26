@@ -9,7 +9,7 @@ var API = ""
 var NotesFound = [];
 var NoteCount = 0;
 
-Encoder.encoding = ""
+
 var NoteData = {
     "0":{
         "1":{
@@ -169,8 +169,10 @@ function SendDataToAPI(Data){
 }
 
 function HandelNotes(Data){
-    if(Data.target.getAttribute("id") == "notes"){
-        
+    console.log(Data)
+    if(Data.target.getAttribute("class") == "note"){
+        console.log("Note")
+        Data.target.remove()
     }
 }
 
