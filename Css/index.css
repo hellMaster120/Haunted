@@ -51,3 +51,12 @@ body{
     box-shadow: rgb(138,3,3) -4px 0px 20px 8px;
 
 }
+#note{
+    width: 40px;
+    position: absolute;
+    top:550px;
+    left:950px;
+    transform: rotate(90deg);
+    
+
+}

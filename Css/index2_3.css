@@ -64,6 +64,6 @@ body{
     position: absolute;
     top: 375px;
     left: 1260px;
-    filter: brightness(.02);
+    filter: brightness(.05);
     transform: rotate3d(1, 3, 8, 182deg);
 }
