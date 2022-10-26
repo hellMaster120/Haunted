@@ -29,10 +29,10 @@ body{
 #note1{
 	width: 41px;
     position: absolute;
-    top: 477px;
-    left: 320px;
-    filter: brightness(.2);
-    transform: rotate3d(1, 3, 8, 182deg);
+    top: 404px;
+    left: 5px;
+    filter: brightness(.06);
+    transform: rotate3d(1, 3, 8, 1deg);
 
 }
 #note2{
