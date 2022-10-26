@@ -64,9 +64,9 @@ body{
     margin-bottom: 15px;
     position: absolute;
     left: 385px;
-    top: 630px;
+    top: 69%;
     transform: rotate3d(135, -24, 14, 60deg);
-	filter: brightness(0.36);
+    filter: brightness(0.36);
 }
 
 #Door{
