@@ -35,7 +35,6 @@ body{
 }
 
 #Door{
-
     width: 70px;
     height: 155px;
     position: relative;
@@ -45,18 +44,40 @@ body{
     box-shadow: #ffffff78 -4px 0px 20px;
     transition: box-shadow 1s;
     border-radius: 4px;
+    transform: translate(50%,-50%);
 }
+
+/*
+#Door{
+    width: 4.1vw;
+    height: 17vh;
+    position: relative;
+    top: 68.2vh;
+    left: 49.4vw;
+    box-shadow: #ffffff78 -4px 0px 20px;
+    transition: box-shadow 1s;
+    border-radius: 4px;
+    transform: translate(50%,-50%);
+}
+*/
 #Door:hover{
     cursor: pointer;
     box-shadow: rgb(138,3,3) -4px 0px 20px 8px;
-
 }
+
 #note{
     width: 40px;
     position: absolute;
     top:550px;
     left:950px;
     transform: rotate(90deg);
-    
-
 }
+/*
+#note{
+    width: 40px;
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    transform: rotate(90deg) translate(50%, -50%);
+}
+*/
