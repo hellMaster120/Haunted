@@ -14,9 +14,9 @@ html{
 
 body{
 	min-width:100%;
-	min-height:100%;
-	
+	min-height:100%;	
 }
+
 #Background{
     position:absolute;
     background: url(../Imgs/1index.png) no-repeat center center fixed; 
@@ -27,6 +27,7 @@ body{
     filter: blur(13px);
     transition: filter 2s;
 }
+
 #Door{
     height:160px;
     position: relative;
@@ -43,11 +44,7 @@ body{
     opacity: .5;
     transition:oppacity 30s;
     cursor:default;
-
-
 }
-
-
 
 #fakenote{
     position: absolute;
