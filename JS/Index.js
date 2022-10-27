@@ -7,6 +7,7 @@ var JumpScareCount = 0
 var JumpScareDone = [];
 var API = ""
 var NotesFound = [];
+var NotesRemoved = [];
 var NoteCount = 0;
 
 
@@ -116,7 +117,7 @@ var NoteData = {
 
 
 if(sessionStorage.getItem("NoteData") == null){
-    sessionStorage.setItem("NoteData", JSON.stringify({"NoteData":NoteData,"Count":NoteCount}));
+    sessionStorage.setItem("NoteData", JSON.stringify({"NoteData":NoteData,"Count":NoteCount,"NotesRemoved":NotesRemoved}));
 }else{
     NewJson = JSON.parse(sessionStorage.getItem("NoteData"))["NoteData"]
     Object.keys(NewJson).forEach(Data=>{
@@ -125,6 +126,16 @@ if(sessionStorage.getItem("NoteData") == null){
         })
     })
     NoteData = NewJson
+    NoteCount =  JSON.parse(sessionStorage.getItem("NoteData"))["Count"]
+    NotesRemoved = JSON.parse(sessionStorage.getItem("NoteData"))["NotesRemoved"] 
+    NotesRemoved.forEach(Data=>{
+        for (let index = 0; index < document.getElementsByClassName("note").length; index++) {
+            const element = document.getElementsByClassName("note")[index];
+            if(element.getAttribute("NoteID") == Data){
+                element.remove()
+            }
+        }
+    })
 }
 
 if(window.origin != "https://mc-kshellenbarger24.github.io"){
@@ -170,11 +181,15 @@ function handleCredentialResponse(Data){
 Background.addEventListener("click",(Data)=>{
     console.log("YOUR MOM")
     var StorageData = JSON.parse(sessionStorage.getItem("Login"))
-    if(Data.target == document.getElementById("Door") && StorageData["Logined"]){
-        window.location.href = Path+Data.target.getAttribute("Link")
+    if(StorageData["Logined"]){
+        console.log(Data.target)
+        if(Data.target.getAttribute("id") == "Door" || Data.target.getAttribute("class") == "Door"){
+            console.log(Data.target.getAttribute("Link"))
+            window.location.href = Path+Data.target.getAttribute("Link")
+        }
+        JumpScares(Data)
+        HandelNotes(Data)
     }
-    JumpScares(Data)
-    HandelNotes(Data)
 })
 
 function SendDataToAPI(Data){
@@ -194,7 +209,6 @@ function Json_To_Uint8Array(Json){
 
 
 function HandelNotes(Data){
-    console.log(Data)
     if(Data.target.getAttribute("class") == "note"){
         var NoteID = Data.target.getAttribute("NoteID").split(":")[0]
         console.log(Data.target.getAttribute("NoteID").split(":"))
@@ -204,7 +218,12 @@ function HandelNotes(Data){
         var Note = NoteData[NoteID][Rand]["Data"]
         NoteData[NoteID].pop(Rand)
         NoteCount = NoteCount+1
-        sessionStorage.setItem("NoteData", JSON.stringify({"NoteData":NoteData,"Count":NoteCount}))
+
+        if(NotesRemoved.lastIndexOf(Data.target.getAttribute("NoteID").split(":")[1]) == -1 ){
+            NotesRemoved.push(Data.target.getAttribute("NoteID"))
+        }
+        console.log(NotesRemoved)
+        sessionStorage.setItem("NoteData", JSON.stringify({"NoteData":NoteData,"Count":NoteCount,"NotesRemoved":NotesRemoved}))
         Data.target.remove()
     }else if(Data.target.getAttribute("class") == "fakenote"){
         Data.target.remove()
@@ -219,13 +238,7 @@ function JumpScares(Data){
             JumpScareDone.push(Data.target.getAttribute("Count"))
             JumpScareCount = JumpScareCount+1
         }
-        
         sessionStorage.setItem("JumpScares", JSON.stringify({"JumpScares":JumpScareDone,"Count":JumpScareCount}));
-        SendDataToAPI({
-            "JumpScares":JumpScareDone,
-            "JumpScareCount":JumpScareCount
-        })
     }
-
 }
 
