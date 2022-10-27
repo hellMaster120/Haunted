@@ -30,11 +30,14 @@ body{
 }
 
 #note{
-    top: 380px;
-    left:250px;
+    top: 550px;
+    left: 750px;
     width: 70px;
     position:absolute;
     z-index: 3;
     transform: rotate3d(2,5,3,180deg);
+
+}
+#scare{
 
 }
