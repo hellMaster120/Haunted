@@ -15,10 +15,11 @@ html{
 body{
 	min-width:100%;
 	min-height:100%;
+	filter: blur(1px) brightness(0.5) grayscale(0);
 }
 #Background{
     position:absolute;
-    background: url(../Imgs/haunted\ house\ 1920x1080\ wallpaper_www.wallpaperhi.com_19\ EDITED.png) no-repeat center center fixed; 
+    background: url(../Imgs/Index3.jpg) no-repeat center center fixed; 
     background-size: cover;
     background-blend-mode: darken, luminosity;
     width: 100%;
