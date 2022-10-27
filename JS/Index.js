@@ -196,13 +196,17 @@ function Json_To_Uint8Array(Json){
 function HandelNotes(Data){
     console.log(Data)
     if(Data.target.getAttribute("class") == "note"){
-        var Max = Object.keys(NoteData[Data.target.getAttribute("NoteID")]).length
+        var NoteID = Data.target.getAttribute("NoteID").split(":")[0]
+        console.log(Data.target.getAttribute("NoteID").split(":"))
+        var Max = Object.keys(NoteData[NoteID]).length
         var Min = 0
         var Rand = Math.floor((Math.random() * (Max - Min) + Min))
-        var Note = NoteData[Data.target.getAttribute("NoteID")][Rand]["Data"]
-        NoteData[Data.target.getAttribute("NoteID")].pop(Rand)
+        var Note = NoteData[NoteID][Rand]["Data"]
+        NoteData[NoteID].pop(Rand)
         NoteCount = NoteCount+1
         sessionStorage.setItem("NoteData", JSON.stringify({"NoteData":NoteData,"Count":NoteCount}))
+        Data.target.remove()
+    }else if(Data.target.getAttribute("class") == "fakenote"){
         Data.target.remove()
     }
 }
