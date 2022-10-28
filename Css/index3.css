@@ -54,7 +54,19 @@ body{
 #note4{
     position: absolute;
     width: 2.6%;
-    left: 40%;
-    top: 55.2%;
-    transform: translate(50%,-50%) matrix3d(2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 5);
+    left: 45.7%;
+    top: 44.2%;
+    transform: translate(50%,-50%) matrix3d(2, 0, 0, 0, 0, -4, 0, 0, 0, 0, 1, 0, 0, 0, 0, 7);
+    filter: brightness(0.4) blur(2.7px);
+}
+#Door{
+	position: absolute;
+    transform: translate(50%, -50%) matrix3d(0.4, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 4);
+    width: 6.1vw;
+    height: 29.1vh;
+    top: 44%;
+    left: 36.3%;
+    filter: blur(66px) brightness(1);
+    background: #910808;
+    cursor: zoom-in;
 }
