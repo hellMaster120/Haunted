@@ -17,6 +17,7 @@ body{
 	min-height:100%;
 	filter: blur(1px) brightness(0.5) grayscale(0);
 }
+
 #Background{
     position:absolute;
     background: url(../Imgs/index3_2.jpg) no-repeat center center fixed; 
@@ -26,4 +27,78 @@ body{
     height: 100%;
     filter: blur(13px);
     transition: filter 2s;
+}
+#Door{
+    position: absolute;
+    width: 18vw;
+    height: 153.1vh;
+    top: 55%;
+    left: 17.3%;
+    box-shadow: inset #d10000f5 -1px 5px 16px 8px;
+    transform: translate(50%, -50%) matrix3d(0.9, -2.3, 0, 0, -0.3, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3);
+    background: url(../Imgs/haunted\ house\ 1920x1080\ wallpaper_www.wallpaperhi.com_19\ EDITED.png) no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: darken, luminosity;
+    filter: opacity(0.8) brightness(1) blur(12.2px);
+    transition: filter 0s;
+    animation-name: Anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor:help;
+}
+#note1{
+    position: absolute;
+    transform: translate(50%,-50%) matrix3d(1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    width: 3vw;
+    top: 94%;
+    left: 44.3%;
+    filter: brightness(0.4) blur(1.8px);
+}
+#note2{
+    position: absolute;
+    transform: translate(50%,-50%) matrix3d(1, 0, 0, 0, 0, -0.6, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.8);
+    width: 3vw;
+    top: 58.2%;
+    left: 41.9%;
+    filter: brightness(0.6) blur(1.2px);
+}
+#note3{
+    position: absolute;
+    transform: translate(50%,-50%) matrix3d(1, 0, 0, 0, 0, 1.4, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2);
+    width: 3vw;
+    top: 36%;
+    left: 68%;
+    filter: brightness(0.5) blur(1.4px);
+}
+#note4{
+    position: absolute;
+    transform: translate(50%,-50%) matrix3d(2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2);
+    width: 3vw;
+    top: 96%;
+    left: 61%;
+    filter: brightness(0.4) blur(2px);
+}
+#note5{
+    position: absolute;
+    transform: translate(50%,-50%) matrix3d(2, 0, 0, 0, 0, 0.6, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.9);
+    width: 3vw;
+    top: 89.2%;
+    left: 39%;
+    filter: brightness(0.6) blur(2px);
+}
+@keyframes Anim{
+    0% {
+        cursor:help;
+        filter: opacity(0.8) brightness(1) blur(12.2px);
+    }
+    
+    50% {
+        cursor:none;
+        filter: opacity(0.6) brightness(1) blur(30.2px);
+    }
+    100%{
+        cursor:help;
+        filter: opacity(0.8) brightness(1) blur(12.2px);
+    }
+
 }

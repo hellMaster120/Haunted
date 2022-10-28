@@ -158,15 +158,10 @@ if(JSON.parse(sessionStorage.getItem("Login"))["Logined"]){
     Background.style.filter = "blur(0px)";  
 }
 
-if(TestingMode == true){
-    if(LoginButton){
-        LoginButton.style.top = "0px";
-        LoginButton.style.right = "20px";
-    }
-    Background.style.filter = "blur(0px)";
-    sessionStorage.setItem("Login", JSON.stringify({"Data":"Dev","Logined":true}));
-}
 
+if(JSON.parse(sessionStorage.getItem("Login"))["Logined"] & LoginButton != null){
+    LoginButton.style.opacity = 0;
+}
 
 function handleCredentialResponse(Data){
     if(LoginButton){
@@ -184,7 +179,8 @@ Background.addEventListener("click",(Data)=>{
     if(StorageData["Logined"]){
         console.log(Data.target)
         if(Data.target.getAttribute("id") == "Door" || Data.target.getAttribute("class") == "Door"){
-            console.log(Data.target.getAttribute("Link"))
+            console.log( Path+Data.target.getAttribute("Link"))
+            
             window.location.href = Path+Data.target.getAttribute("Link")
         }
         JumpScares(Data)

@@ -35,6 +35,7 @@ body{
     left: -43px;
     width:65px;
     opacity: 0;
+    cursor:pointer;
 }
 /*
 #Door {
