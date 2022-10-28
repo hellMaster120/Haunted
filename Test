@@ -1,1 +1,42 @@
 
+#GrabbedNote{
+	position: absolute;
+	width: 62vw;
+	transform: translate(50%, -50%);
+	top: 50%;
+	right: 50%;
+}
+
+#GrabbedNoteText{
+	color: white;
+	position: absolute;
+	transform: translate(50%, -50%);
+	font-size: 42px;
+	width: 37vw;
+	top: 50%;
+	right: 50%;
+	height: auto;
+	text-align: center;
+	overflow-wrap: break-word;
+    opacity: 0;
+    transition: opacity 3s;
+    opacity: 1;
+}
+#GrabbedNoteImg{
+	width:100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,7 @@
 	padding: 0px;
 	box-sizing: border-box;
 	text-align: center;
+    user-select: none;
 }
 
 html{
@@ -45,6 +46,7 @@ body{
     animation-duration: 2s;
     animation-iteration-count: infinite;
     cursor:help;
+    z-index:-1;
 }
 #note1{
     position: absolute;
@@ -53,6 +55,7 @@ body{
     top: 94%;
     left: 44.3%;
     filter: brightness(0.4) blur(1.8px);
+    z-index:-1;
 }
 #note2{
     position: absolute;
@@ -61,6 +64,7 @@ body{
     top: 58.2%;
     left: 41.9%;
     filter: brightness(0.6) blur(1.2px);
+    z-index:-1;
 }
 #note3{
     position: absolute;
@@ -69,6 +73,7 @@ body{
     top: 36%;
     left: 68%;
     filter: brightness(0.5) blur(1.4px);
+    z-index:-1;
 }
 #note4{
     position: absolute;
@@ -77,6 +82,7 @@ body{
     top: 96%;
     left: 61%;
     filter: brightness(0.4) blur(2px);
+    z-index:-1;
 }
 #note5{
     position: absolute;
@@ -85,6 +91,7 @@ body{
     top: 89.2%;
     left: 39%;
     filter: brightness(0.6) blur(2px);
+    z-index:-1;
 }
 @keyframes Anim{
     0% {
